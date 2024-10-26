@@ -1,0 +1,10 @@
+{
+	"cSpell.words": [
+		"Cupertino",
+		"flet",
+		"Pairable",
+		"pairables",
+		"pyinstaller"
+	],
+	"python.defaultInterpreterPath": ".venv/bin/python"
+}

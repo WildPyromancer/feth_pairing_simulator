@@ -1,0 +1,1506 @@
+[
+	{
+		"key": "ベレト",
+		"value": {
+			"pairable_names": [
+				"エーデルガルト",
+				"リンハルト",
+				"ベルナデッタ",
+				"ドロテア",
+				"ペトラ",
+				"メルセデス",
+				"アネット",
+				"イングリット",
+				"リシテア",
+				"マリアンヌ",
+				"ヒルダ",
+				"レオニー",
+				"フレン",
+				"マヌエラ",
+				"ギルベルト",
+				"アロイス",
+				"カトリーヌ",
+				"シャミア",
+				"レア",
+				"ソティス",
+				"イエリッツァ",
+				"ユーリス",
+				"コンスタンツェ",
+				"ハピ"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": true,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": true,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": true,
+					"joinable": true
+				},
+				"翠風": {
+					"default": true,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "ベレス",
+		"value": {
+			"pairable_names": [
+				"エーデルガルト",
+				"ディミトリ",
+				"クロード",
+				"ヒューベルト",
+				"フェルディナント",
+				"リンハルト",
+				"カスパル",
+				"ドロテア",
+				"ドゥドゥー",
+				"フェリクス",
+				"アッシュ",
+				"シルヴァン",
+				"メルセデス",
+				"ローレンツ",
+				"ラファエル",
+				"イグナーツ",
+				"セテス",
+				"ハンネマン",
+				"ギルベルト",
+				"アロイス",
+				"ツィリル",
+				"レア",
+				"ソティス",
+				"イエリッツァ",
+				"ユーリス",
+				"バルタザール"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": true,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": true,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": true,
+					"joinable": true
+				},
+				"翠風": {
+					"default": true,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "エーデルガルト",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"ベレス",
+				"ヒューベルト",
+				"フェルディナント",
+				"リンハルト",
+				"カスパル",
+				"ベルナデッタ",
+				"ドロテア",
+				"リシテア",
+				"ハンネマン",
+				"マヌエラ",
+				"コンスタンツェ"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": true,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": false
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": false
+				},
+				"翠風": {
+					"default": false,
+					"joinable": false
+				}
+			}
+		}
+	},
+	{
+		"key": "ヒューベルト",
+		"value": {
+			"pairable_names": [
+				"ベレス",
+				"エーデルガルト",
+				"フェルディナント",
+				"ベルナデッタ",
+				"ドロテア",
+				"ペトラ",
+				"シャミア"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": true,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": false
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": false
+				},
+				"翠風": {
+					"default": false,
+					"joinable": false
+				}
+			}
+		}
+	},
+	{
+		"key": "フェルディナント",
+		"value": {
+			"pairable_names": [
+				"ベレス",
+				"エーデルガルト",
+				"ヒューベルト",
+				"ベルナデッタ",
+				"ドロテア",
+				"ペトラ",
+				"メルセデス",
+				"マリアンヌ",
+				"ヒルダ",
+				"フレン",
+				"マヌエラ",
+				"コンスタンツェ"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": true,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": true,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "リンハルト",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"ベレス",
+				"エーデルガルト",
+				"カスパル",
+				"ベルナデッタ",
+				"ドロテア",
+				"ペトラ",
+				"アネット",
+				"リシテア",
+				"マリアンヌ",
+				"フレン",
+				"カトリーヌ",
+				"ハピ"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": true,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": true,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "カスパル",
+		"value": {
+			"pairable_names": [
+				"ベレス",
+				"エーデルガルト",
+				"リンハルト",
+				"ベルナデッタ",
+				"ドロテア",
+				"ペトラ",
+				"アッシュ",
+				"アネット",
+				"ヒルダ",
+				"カトリーヌ",
+				"シャミア"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": true,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": true,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "ベルナデッタ",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"エーデルガルト",
+				"ヒューベルト",
+				"フェルディナント",
+				"リンハルト",
+				"カスパル",
+				"フェリクス",
+				"ラファエル",
+				"セテス",
+				"イエリッツァ",
+				"ユーリス"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": true,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": true,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "ドロテア",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"ベレス",
+				"エーデルガルト",
+				"ヒューベルト",
+				"フェルディナント",
+				"リンハルト",
+				"カスパル",
+				"ペトラ",
+				"フェリクス",
+				"シルヴァン",
+				"ローレンツ",
+				"ハンネマン",
+				"マヌエラ",
+				"ユーリス"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": true,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": true,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "ペトラ",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"クロード",
+				"ヒューベルト",
+				"フェルディナント",
+				"リンハルト",
+				"カスパル",
+				"ドロテア",
+				"アッシュ",
+				"イグナーツ",
+				"ツィリル"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": true,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": true,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "ディミトリ",
+		"value": {
+			"pairable_names": [
+				"ベレス",
+				"ドゥドゥー",
+				"フェリクス",
+				"メルセデス",
+				"アネット",
+				"イングリット",
+				"マリアンヌ",
+				"フレン",
+				"ギルベルト",
+				"カトリーヌ",
+				"ハピ"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": false
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": false
+				},
+				"蒼月": {
+					"default": true,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": false
+				}
+			}
+		}
+	},
+	{
+		"key": "ドゥドゥー",
+		"value": {
+			"pairable_names": [
+				"ベレス",
+				"ディミトリ",
+				"アッシュ",
+				"メルセデス",
+				"アネット",
+				"イングリット",
+				"フレン",
+				"シャミア"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": false
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": false
+				},
+				"蒼月": {
+					"default": true,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": false
+				}
+			}
+		}
+	},
+	{
+		"key": "フェリクス",
+		"value": {
+			"pairable_names": [
+				"ベレス",
+				"ディミトリ",
+				"ベルナデッタ",
+				"ドロテア",
+				"シルヴァン",
+				"メルセデス",
+				"アネット",
+				"イングリット",
+				"リシテア",
+				"レオニー",
+				"フレン"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": true,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "アッシュ",
+		"value": {
+			"pairable_names": [
+				"ベレス",
+				"カスパル",
+				"ペトラ",
+				"ドゥドゥー",
+				"メルセデス",
+				"アネット",
+				"イングリット",
+				"マリアンヌ",
+				"カトリーヌ",
+				"ツィリル",
+				"ハピ"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": true,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "シルヴァン",
+		"value": {
+			"pairable_names": [
+				"ベレス",
+				"ドロテア",
+				"フェリクス",
+				"メルセデス",
+				"イングリット"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": true,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "メルセデス",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"ベレス",
+				"ディミトリ",
+				"フェルディナント",
+				"ドゥドゥー",
+				"フェリクス",
+				"アッシュ",
+				"シルヴァン",
+				"アネット",
+				"ローレンツ",
+				"イグナーツ",
+				"アロイス",
+				"イエリッツァ",
+				"コンスタンツェ"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": true,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "アネット",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"ディミトリ",
+				"クロード",
+				"リンハルト",
+				"カスパル",
+				"ドゥドゥー",
+				"フェリクス",
+				"アッシュ",
+				"メルセデス",
+				"ハンネマン",
+				"ギルベルト"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": true,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "イングリット",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"ディミトリ",
+				"クロード",
+				"ドゥドゥー",
+				"フェリクス",
+				"アッシュ",
+				"シルヴァン",
+				"ラファエル",
+				"イグナーツ",
+				"セテス",
+				"ユーリス"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": true,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "クロード",
+		"value": {
+			"pairable_names": [
+				"ベレス",
+				"ペトラ",
+				"アネット",
+				"イングリット",
+				"ローレンツ",
+				"リシテア",
+				"マリアンヌ",
+				"ヒルダ",
+				"レオニー",
+				"フレン",
+				"シャミア",
+				"バルタザール"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": false
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": false
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": false
+				},
+				"翠風": {
+					"default": true,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "ローレンツ",
+		"value": {
+			"pairable_names": [
+				"ベレス",
+				"クロード",
+				"ドロテア",
+				"メルセデス",
+				"リシテア",
+				"マリアンヌ",
+				"ヒルダ",
+				"レオニー",
+				"マヌエラ",
+				"カトリーヌ"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": true,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "ラファエル",
+		"value": {
+			"pairable_names": [
+				"ベレス",
+				"ベルナデッタ",
+				"イングリット",
+				"イグナーツ",
+				"リシテア",
+				"マリアンヌ",
+				"ヒルダ",
+				"レオニー",
+				"フレン",
+				"シャミア"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": true,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "イグナーツ",
+		"value": {
+			"pairable_names": [
+				"ベレス",
+				"ペトラ",
+				"メルセデス",
+				"イングリット",
+				"ラファエル",
+				"リシテア",
+				"マリアンヌ",
+				"ヒルダ",
+				"レオニー",
+				"フレン",
+				"シャミア"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": true,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "リシテア",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"エーデルガルト",
+				"クロード",
+				"リンハルト",
+				"フェリクス",
+				"ローレンツ",
+				"ラファエル",
+				"イグナーツ",
+				"ハンネマン",
+				"ツィリル",
+				"バルタザール"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": true,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "マリアンヌ",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"ディミトリ",
+				"クロード",
+				"フェルディナント",
+				"リンハルト",
+				"アッシュ",
+				"ローレンツ",
+				"ラファエル",
+				"イグナーツ",
+				"ヒルダ",
+				"ハンネマン"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": true,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "ヒルダ",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"クロード",
+				"フェルディナント",
+				"カスパル",
+				"ローレンツ",
+				"ラファエル",
+				"イグナーツ",
+				"マリアンヌ",
+				"セテス",
+				"ツィリル",
+				"バルタザール"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": false
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": true,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "レオニー",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"クロード",
+				"フェリクス",
+				"ローレンツ",
+				"ラファエル",
+				"イグナーツ",
+				"セテス",
+				"アロイス",
+				"シャミア"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": true,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "セテス",
+		"value": {
+			"pairable_names": [
+				"ベレス",
+				"ベルナデッタ",
+				"イングリット",
+				"ヒルダ",
+				"レオニー",
+				"フレン",
+				"マヌエラ",
+				"カトリーヌ"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": false
+				},
+				"銀雪": {
+					"default": true,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": true,
+					"joinable": true
+				},
+				"翠風": {
+					"default": true,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "フレン",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"ディミトリ",
+				"クロード",
+				"フェルディナント",
+				"リンハルト",
+				"ドゥドゥー",
+				"フェリクス",
+				"ラファエル",
+				"イグナーツ",
+				"セテス"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": false
+				},
+				"銀雪": {
+					"default": true,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": true,
+					"joinable": true
+				},
+				"翠風": {
+					"default": true,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "ハンネマン",
+		"value": {
+			"pairable_names": [
+				"ベレス",
+				"エーデルガルト",
+				"ドロテア",
+				"アネット",
+				"リシテア",
+				"マリアンヌ",
+				"マヌエラ"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "マヌエラ",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"エーデルガルト",
+				"フェルディナント",
+				"ドロテア",
+				"ローレンツ",
+				"セテス",
+				"ハンネマン"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "ギルベルト",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"ベレス",
+				"ディミトリ",
+				"アネット"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": false
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": false
+				},
+				"蒼月": {
+					"default": true,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": false
+				}
+			}
+		}
+	},
+	{
+		"key": "アロイス",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"ベレス",
+				"メルセデス",
+				"レオニー",
+				"カトリーヌ"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "カトリーヌ",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"ディミトリ",
+				"リンハルト",
+				"カスパル",
+				"アッシュ",
+				"ローレンツ",
+				"セテス",
+				"アロイス",
+				"シャミア"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": false
+				},
+				"銀雪": {
+					"default": true,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "シャミア",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"クロード",
+				"ヒューベルト",
+				"カスパル",
+				"ドゥドゥー",
+				"ラファエル",
+				"イグナーツ",
+				"レオニー",
+				"カトリーヌ",
+				"ツィリル"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": true,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "ツィリル",
+		"value": {
+			"pairable_names": [
+				"ベレス",
+				"ペトラ",
+				"アッシュ",
+				"リシテア",
+				"ヒルダ",
+				"シャミア"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": false
+				},
+				"銀雪": {
+					"default": true,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "レア",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"ベレス"
+			],
+			"have_solo_end": false,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": false
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": false
+				},
+				"翠風": {
+					"default": false,
+					"joinable": false
+				}
+			}
+		}
+	},
+	{
+		"key": "ソティス",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"ベレス"
+			],
+			"have_solo_end": false,
+			"route_data": {
+				"紅花": {
+					"default": true,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": true,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": true,
+					"joinable": true
+				},
+				"翠風": {
+					"default": true,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "イエリッツァ",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"ベレス",
+				"ベルナデッタ",
+				"メルセデス",
+				"コンスタンツェ"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": true,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": false
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": false
+				},
+				"翠風": {
+					"default": false,
+					"joinable": false
+				}
+			}
+		}
+	},
+	{
+		"key": "ユーリス",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"ベレス",
+				"ベルナデッタ",
+				"ドロテア",
+				"イングリット",
+				"バルタザール",
+				"コンスタンツェ",
+				"ハピ"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "バルタザール",
+		"value": {
+			"pairable_names": [
+				"ベレス",
+				"クロード",
+				"リシテア",
+				"ヒルダ",
+				"ユーリス",
+				"コンスタンツェ",
+				"ハピ"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "コンスタンツェ",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"エーデルガルト",
+				"フェルディナント",
+				"メルセデス",
+				"イエリッツァ",
+				"ユーリス",
+				"バルタザール",
+				"ハピ"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	},
+	{
+		"key": "ハピ",
+		"value": {
+			"pairable_names": [
+				"ベレト",
+				"ディミトリ",
+				"リンハルト",
+				"アッシュ",
+				"ユーリス",
+				"バルタザール",
+				"コンスタンツェ"
+			],
+			"have_solo_end": true,
+			"route_data": {
+				"紅花": {
+					"default": false,
+					"joinable": true
+				},
+				"銀雪": {
+					"default": false,
+					"joinable": true
+				},
+				"蒼月": {
+					"default": false,
+					"joinable": true
+				},
+				"翠風": {
+					"default": false,
+					"joinable": true
+				}
+			}
+		}
+	}
+]

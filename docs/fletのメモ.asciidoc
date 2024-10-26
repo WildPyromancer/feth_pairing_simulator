@@ -1,0 +1,30 @@
+
+
+== theme
+
+Containerは、Pageと同じく、theme 及び theme_mode プロパティを持っている
+
+=== 対応関係
+
+theme.text_theme.body_medium::
+    デフォルトのサイズは14。 +
+*   Checkbox.label
+*   Text +
+    コントロールの子要素の場合（例: `content=ft.Text` ）には適用されない。
+*   Switch.label
+
+theme.dialog_theme::
+    "Cupertino"AlertDialogの方には適用されない。 +
+
+個別（themeで一括操作できない）::
+*   dropdown
+*   MenuItemButton.content の Text
+*   ButtonStyle
+
+謎::
+*   navigation_bar.label +
+    改変するには、ラベルとテキストを含んだ自作コントロールをicon_contentに入れるしか無さそう。
+
+=== 注意点
+page.theme_mode に追従しないテキストがある。 +
+その場合は、 `color=ft.colors.INVERSE_SURFACE` を設定するといい感じになる。
