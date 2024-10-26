@@ -1,6 +1,6 @@
 # 風花雪月ペアシミュレーター
 
-風花雪月でのペア（エンド）の選択を手助けするfletアプリケーションです。
+支援をB止めして最後に任意のペアを作る時の手助けをするfletアプリケーションです。
 
 ## Demo
 
@@ -36,12 +36,13 @@
 
 ## クレジット
 
-- ファイアーエムブレム 風花雪月の権利表記  
-  © 2019 Nintendo / INTELLIGENT SYSTEMS Co-developed by KOEI TECMO GAMES CO., LTD.
-
-- キャラクターデータの参考元  
-  [ファイアーエムブレム 風花雪月 攻略Wiki](<https://www.pegasusknight.com/wiki/fe16/>)
-
-- キャラクターの画像  
-  Nintendo Switchのキャプチャ機能を用いて撮影し、トリミングしたものです。
-  ※Nintendo Switchは任天堂の商標です。
+<dl>
+ <dt>ファイアーエムブレム 風花雪月の権利表記</dt>
+  <dd>© 2019 Nintendo / INTELLIGENT SYSTEMS Co-developed by KOEI TECMO GAMES CO., LTD.</dd>
+  <dt>キャラクターデータの参考元</dt>
+  <dd><a href="https://www.pegasusknight.com/wiki/fe16/">ファイアーエムブレム 風花雪月 攻略Wiki</a></dd>
+ <dt>キャラクターの画像</dt>
+  <dd>Nintendo Switchのキャプチャ機能を用いて撮影し、トリミングしたものです。
+  </dd>
+  <dd>※Nintendo Switchは任天堂の商標です。</dd>
+</dl>
