@@ -36,12 +36,12 @@
 
 ## クレジット
 
-- ファイアーエムブレム 風花雪月の権利表記
+- ファイアーエムブレム 風花雪月の権利表記  
   © 2019 Nintendo / INTELLIGENT SYSTEMS Co-developed by KOEI TECMO GAMES CO., LTD.
 
-- キャラクターデータの参考元
+- キャラクターデータの参考元  
   [ファイアーエムブレム 風花雪月 攻略Wiki](<https://www.pegasusknight.com/wiki/fe16/>)
 
-- キャラクターの画像
+- キャラクターの画像  
   Nintendo Switchのキャプチャ機能を用いて撮影し、トリミングしたものです。
   ※Nintendo Switchは任天堂の商標です。
