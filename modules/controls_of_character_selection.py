@@ -17,7 +17,7 @@ class ExistenceColumnParts(NamedTuple):
     checkbox: ft.Checkbox
 
 
-def get_pair_column_parts(
+def get_existence_column_parts(
     ct: ch.UniqueCharactersTuple,
     on_change_check_box: OptionalEventCallable[Any],
     images_dir: str,

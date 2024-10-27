@@ -524,7 +524,7 @@ async def main(page: ft.Page):
             if c.state.exist != value["exist"]:  # type: ignore
                 c.state.exist = not c.state.exist
                 synchronize_existence_and_controls(c)
-        page.update()
+        page.update()  # type: ignore
 
     # メニューバー 操作
 
@@ -597,7 +597,7 @@ async def main(page: ft.Page):
     def handle_how_to_use_button_click(e: ft.ControlEvent):
         def return_view(e: ft.ControlEvent):
             page.views.pop()
-            page.update()
+            page.update()  # type: ignore
 
         return_button = ft.Container(
             on_click=return_view,
@@ -633,7 +633,7 @@ async def main(page: ft.Page):
             ],
         )
         page.views.append(htu_view)
-        page.update()
+        page.update()  # type: ignore
 
     #
     # 処理の開始
@@ -771,7 +771,7 @@ async def main(page: ft.Page):
         ],
     )
 
-    column_parts_of_character_selection = ccs.get_pair_column_parts(
+    column_parts_of_character_selection = ccs.get_existence_column_parts(
         ct, handle_checkbox_is_changed, character_face_dir
     )
 
@@ -810,7 +810,7 @@ async def main(page: ft.Page):
             main_content.content = column_of_pair_selection
         else:
             return
-        page.update(main_content)
+        page.update(main_content)  # type: ignore
 
     page.navigation_bar = ft.CupertinoNavigationBar(
         bgcolor=ft.colors.ON_INVERSE_SURFACE,
@@ -845,6 +845,4 @@ async def main(page: ft.Page):
 
 
 if __name__ == "__main__":
-    ft.app(
-        target=main,
-    )  # type: ignore
+    ft.app(target=main)  # type: ignore
