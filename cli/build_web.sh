@@ -13,7 +13,7 @@ flet build web --module-name ./pairing_simulator.py \
 	auto_py_to_exe_config.json,
 	cli,
 	CONTRIBUTING.adoc,
-	docs,
+	docs/fletのメモ.asciidoc,
 	logs,
 	modules/_pychache_,
 	modules/.ruff_cache,

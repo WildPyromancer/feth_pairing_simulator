@@ -6,5 +6,12 @@
 		"pairables",
 		"pyinstaller"
 	],
-	"python.defaultInterpreterPath": ".venv/bin/python"
+	"python.defaultInterpreterPath": ".venv/bin/python",
+	"[markdown]": {
+		"files.trimTrailingWhitespaceInRegexAndStrings": false,
+		"editor.trimAutoWhitespace": false,
+		"files.trimTrailingWhitespace": false,
+		"files.trimFinalNewlines": false,
+		"diffEditor.ignoreTrimWhitespace": false
+	}
 }

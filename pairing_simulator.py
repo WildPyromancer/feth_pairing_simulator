@@ -51,9 +51,10 @@ async def main(page: ft.Page):
     ).resolve()
 
     # asserts下のディレクトリは、ルート（/）直下に配置される。
-    images_dir = "/images/character_face"
+    images_dir = "/images"
     # pyinstallerによるパッケージ化用。
-    # images_dir = str(PARENT_PATH.joinpath("./images/character_face").resolve())
+    # images_dir = str(PARENT_PATH.joinpath("./images").resolve())
+    character_face_dir = images_dir + "/character_face"
 
     ct: ch.UniqueCharactersTuple
     route_only_pair = [
@@ -66,6 +67,7 @@ async def main(page: ft.Page):
     app_title = "風花雪月ペアシミュレーター"
     page.title = app_title
 
+    # demo動画撮影用
     # page.window.width = 720
     # page.window.height = 720
 
@@ -591,6 +593,43 @@ async def main(page: ft.Page):
             selectable=True,
         )
 
+    # メニューバー ヘルプ
+    def handle_how_to_use_button_click(e: ft.ControlEvent):
+        def return_view(e: ft.ControlEvent):
+            page.views.pop()
+            page.update()
+
+        return_button = ft.Container(
+            on_click=return_view,
+            content=ft.Row(
+                controls=[
+                    ft.Icon(name=ft.icons.ARROW_BACK_OUTLINED),
+                    ft.Text(value="戻る", style=th.MyTextStyle(size=th.TextSize.large)),
+                ]
+            ),
+        )
+
+        usage_md_path = "./docs/usage.md"
+        try:
+            file = open(file=usage_md_path, mode="rt", encoding="utf-8")
+            md_text = file.read()
+        except Exception as ex:
+            open_dialog(
+                body=f"ファイル「{usage_md_path}」の読み込みに失敗しました",
+            )
+            logger.warning(ex)
+            return
+
+        md = ft.Markdown(value=str(md_text), expand=True)
+        htu_view = ft.View(
+            controls=[
+                return_button,
+                ft.Column(controls=[md], expand=True, scroll=ft.ScrollMode.ALWAYS),
+            ],
+        )
+        page.views.append(htu_view)
+        page.update()
+
     #
     # 処理の開始
     #
@@ -625,7 +664,7 @@ async def main(page: ft.Page):
     # bgcolorの他にもう一個設定しないとバグる。
     menu_style = ft.MenuStyle(
         bgcolor=ft.colors.OUTLINE_VARIANT,
-        alignment=ft.alignment.center,
+        alignment=ft.alignment.top_left,
     )
     sub_menu_style = ft.MenuStyle(
         bgcolor=ft.colors.SURFACE_CONTAINER_HIGHEST,
@@ -692,12 +731,33 @@ async def main(page: ft.Page):
                 menu_style=sub_menu_style,
                 controls=[
                     ft.MenuItemButton(
-                        content=ft.Text("文字起こし", style=mts),
+                        content=ft.Text("組み合わせのまとめ", style=mts),
                         on_click=handle_display_ending_text_button_click,
                     ),
                     ft.MenuItemButton(
-                        content=ft.Text("達成率の表示", style=mts),
+                        content=ft.Text("達成率", style=mts),
                         on_click=handle_display_achievement_rate,
+                    ),
+                ],
+            ),
+            ft.SubmenuButton(
+                width=th.TextSize.medium * 5,
+                content=ft.Text("ヘルプ", style=mts, text_align=ft.TextAlign.CENTER),
+                menu_style=sub_menu_style,
+                controls=[
+                    ft.MenuItemButton(
+                        content=ft.Text("使い方", style=mts),
+                        on_click=handle_how_to_use_button_click,
+                    ),
+                    ft.MenuItemButton(
+                        content=ft.Image(
+                            src=f"{images_dir}/github-mark-white.svg",
+                            width=32,
+                            height=32,
+                        ),
+                        on_click=lambda e: page.launch_url(
+                            url="https://github.com/WildPyromancer/pairing_simulator"
+                        ),
                     ),
                 ],
             ),
@@ -705,7 +765,7 @@ async def main(page: ft.Page):
     )
 
     column_parts_of_character_selection = ccs.get_pair_column_parts(
-        ct, handle_checkbox_is_changed, images_dir
+        ct, handle_checkbox_is_changed, character_face_dir
     )
 
     column_of_character_selection = ft.Column(
@@ -721,7 +781,7 @@ async def main(page: ft.Page):
     # ペアタブの内容の作成。
 
     column_parts_of_pair_selection = cps.get_pair_column_parts(
-        ct, handle_dropdown_option_click, images_dir
+        ct, handle_dropdown_option_click, character_face_dir
     )
 
     column_of_pair_selection = ft.Column(
