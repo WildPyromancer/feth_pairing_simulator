@@ -242,8 +242,16 @@ class PairRow(ft.Row):
     def __init__(self, character: ch.Character, images_dir: str):
         super().__init__(col={"lg": 6, "xl": 4})
         self.controls = [
-            ft.Image(src=os.path.join(images_dir, f"{character.DATA.NAME}.png")),
-            ft.Text(value=character.DATA.NAME, expand=True),
+            ft.Row(
+                controls=[
+                    ft.Image(
+                        src=os.path.join(images_dir, f"{character.DATA.NAME}.png")
+                    ),
+                    ft.Text(value=character.DATA.NAME),
+                ],
+                expand=True,
+                expand_loose=True,
+            ),
         ]
         self.visible = character.state.exist
 
@@ -284,11 +292,14 @@ def get_pair_column_parts(
                 )
             )
         dropdown = SelectableDropDown()
+        dropdown.expand = True
         dropdown.options = dd_options
         dropdown.bgcolor = ft.colors.SURFACE_CONTAINER_HIGHEST
         dropdown.width = 220
+        dropdown.options_fill_horizontally = True
         dropdown.set_value_by_index(0)
         row = PairRow(character=c, images_dir=images_dir)
+        row.alignment = ft.MainAxisAlignment.SPACE_BETWEEN
         row.controls.append(dropdown)
         return_val.append(PairColumnParts(row, dropdown, dd_options))
     return return_val

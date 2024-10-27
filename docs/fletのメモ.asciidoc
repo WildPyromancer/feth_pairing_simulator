@@ -28,3 +28,14 @@ theme.dialog_theme::
 === 注意点
 page.theme_mode に追従しないテキストがある。 +
 その場合は、 `color=ft.colors.INVERSE_SURFACE` を設定するといい感じになる。
+
+== dropdown
+
+=== アイテムが下方向に配置され、見切れる問題
+
+.解決には無関係なプロパティ
+[source,python]
+dropdown.filled = True
+dropdown.text_vertical_align = ft.VerticalAlignment.END
+dropdown.item_height = 100
+dropdown.height = 180
