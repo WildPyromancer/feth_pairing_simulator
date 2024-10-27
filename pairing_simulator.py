@@ -604,7 +604,11 @@ async def main(page: ft.Page):
             content=ft.Row(
                 controls=[
                     ft.Icon(name=ft.icons.ARROW_BACK_OUTLINED),
-                    ft.Text(value="戻る", style=th.MyTextStyle(size=th.TextSize.large)),
+                    ft.Text(
+                        value="戻る",
+                        style=th.MyTextStyle(size=th.TextSize.large),
+                        weight=ft.FontWeight.BOLD,
+                    ),
                 ]
             ),
         )
@@ -616,6 +620,7 @@ async def main(page: ft.Page):
         except Exception as ex:
             open_dialog(
                 body=f"ファイル「{usage_md_path}」の読み込みに失敗しました",
+                title="エラーの発生",
             )
             logger.warning(ex)
             return
@@ -676,7 +681,8 @@ async def main(page: ft.Page):
         style=menu_style,
         controls=[
             ft.SubmenuButton(
-                content=ft.Text("履歴", style=mts),
+                width=th.TextSize.medium * 5,
+                content=ft.Text("履歴", style=mts, text_align=ft.TextAlign.CENTER),
                 menu_style=sub_menu_style,
                 controls=[
                     ft.MenuItemButton(
@@ -698,7 +704,8 @@ async def main(page: ft.Page):
                 ],
             ),
             ft.SubmenuButton(
-                content=ft.Text("操作", style=mts),
+                width=th.TextSize.medium * 5,
+                content=ft.Text("操作", style=mts, text_align=ft.TextAlign.CENTER),
                 menu_style=sub_menu_style,
                 controls=[
                     ft.SubmenuButton(
@@ -726,7 +733,7 @@ async def main(page: ft.Page):
                 ],
             ),
             ft.SubmenuButton(
-                width=th.TextSize.medium * 5,
+                width=th.TextSize.medium * 6,
                 content=ft.Text("その他", style=mts, text_align=ft.TextAlign.CENTER),
                 menu_style=sub_menu_style,
                 controls=[
@@ -741,7 +748,7 @@ async def main(page: ft.Page):
                 ],
             ),
             ft.SubmenuButton(
-                width=th.TextSize.medium * 5,
+                width=th.TextSize.medium * 6,
                 content=ft.Text("ヘルプ", style=mts, text_align=ft.TextAlign.CENTER),
                 menu_style=sub_menu_style,
                 controls=[
@@ -838,4 +845,6 @@ async def main(page: ft.Page):
 
 
 if __name__ == "__main__":
-    ft.app(target=main)  # type: ignore
+    ft.app(
+        target=main,
+    )  # type: ignore
