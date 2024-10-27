@@ -588,7 +588,7 @@ async def main(page: ft.Page):
         total = int(0.5 * sum([len(c.DATA.PAIRABLE_NAMES) for c in ct]))
         current = int(0.5 * sum([len(c.state.names_of_married_partner) for c in ct]))
         open_dialog(
-            body=f"{current} / {total} = {current/total:.2f} %",
+            body=f"{current} / {total} = {100*current/total:.1f} %",
             title="ペアエンド達成率",
             selectable=True,
         )
