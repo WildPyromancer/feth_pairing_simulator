@@ -2,6 +2,8 @@
 
 支援をB止めして最後に任意のペアを作る時の手助けをするfletアプリケーションです。
 
+[リンク](https://feth-pairing-simulator.pages.dev)
+
 ## Demo
 
 ![デモ動画](resource/demo.gif)
