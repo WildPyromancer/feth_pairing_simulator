@@ -387,7 +387,7 @@ async def main(page: ft.Page):
         logger.info("ControlEvent: handle_save_button_click")
         dialog = ft.CupertinoAlertDialog(
             content=ft.Text(
-                value="現在のキャラクター選択の内容を保存し、成立しているペアをペア履歴に追加します。\nよろしいですか？",
+                value="現在の所属キャラクター選択の内容を保存し、成立しているペアをペア履歴に追加します。\nなお、これらのデータはユーザーのストレージに保存されます。\nよろしいですか？",
                 style=mts,
             ),
             title=confirmation_title,
@@ -477,7 +477,7 @@ async def main(page: ft.Page):
             return
         first_dialog = ft.CupertinoAlertDialog(
             content=ft.Text(
-                value="このアプリケーションが作成した履歴を全て削除します。\nよろしいですか？",
+                value="このアプリケーションが「セーブ」ボタンによってストレージに作成した全てのデータを削除します。\nよろしいですか？",
                 style=mts,
             ),
             open=True,
