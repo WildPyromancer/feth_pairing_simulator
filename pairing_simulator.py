@@ -763,7 +763,7 @@ async def main(page: ft.Page):
                             height=32,
                         ),
                         on_click=lambda e: page.launch_url(
-                            url="https://github.com/WildPyromancer/pairing_simulator"
+                            url="https://github.com/WildPyromancer/feth_pairing_simulator"
                         ),
                     ),
                 ],
