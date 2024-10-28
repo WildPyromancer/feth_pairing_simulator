@@ -40,4 +40,8 @@ dropdown.text_vertical_align = ft.VerticalAlignment.END
 dropdown.item_height = 100
 dropdown.height = 180
 # 親要素
-row.height = 200
+row.height =
+
+== markdown
+
+コードブロックの挙動が怪しい。
