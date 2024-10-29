@@ -87,24 +87,15 @@ async def main(page: ft.Page):
         """ダイアログでユーザーに通知し、終了ボタンクリックかダイアログ終了時にwindowを閉じる関数。
         即座に処理を止めるわけではない。そうしたい場合は直後にreturn等で返す必要がある。
         """
-        page.overlay.append(
-            co.WindowCloseDialog(
-                content=ft.Text(value=body, style=mts),
-                open=True,
-            )
-        )
-        page.update()  # type: ignore
+        d = co.WindowCloseDialog(content=ft.Text(value=body, style=mts))
+        page.open(d)
 
     def open_dialog(body: str, title: str | None = None, selectable: bool = False):
-        page.overlay.append(
-            # ft.AlertDialog(
-            ft.CupertinoAlertDialog(
-                title=ft.Text(value=title, style=mts),
-                content=ft.Text(value=body, style=mts, selectable=selectable),
-                open=True,
-            )
+        d = ft.CupertinoAlertDialog(
+            title=ft.Text(value=title, style=mts),
+            content=ft.Text(value=body, style=mts, selectable=selectable),
         )
-        page.update()  # type: ignore
+        page.open(d)
 
     async def update_ct_state_with_client_storage(
         ct: ch.UniqueCharactersTuple,
@@ -298,7 +289,7 @@ async def main(page: ft.Page):
                 er.ErrorCodeAndUserMessage.INCORRECT_CHARACTER_NAME.value
             )
             return
-        page.update()  # type: ignore
+        page.update(main_content)  # type: ignore
 
     def handle_dropdown_option_click(e: ft.ControlEvent) -> None:
         logger.info("ControlEvent: handle_dropdown_option_click")
@@ -359,7 +350,7 @@ async def main(page: ft.Page):
                     er.ErrorCodeAndUserMessage.INCORRECT_CHARACTER_NAME.value
                 )
 
-        page.update()  # type: ignore
+        page.update(main_content)  # type: ignore
 
     # メニューバー 履歴
     async def handle_save_button_click(e: ft.ControlEvent) -> None:
@@ -382,7 +373,7 @@ async def main(page: ft.Page):
                 target_column.dropdown.set_value_by_index(dd_opt_index)
                 await page.client_storage.set_async(c.DATA.NAME, c.state.__dict__)
             page.close(dialog)
-            page.update()  # type: ignore
+            page.update(main_content)  # type: ignore
 
         logger.info("ControlEvent: handle_save_button_click")
         dialog = ft.CupertinoAlertDialog(
@@ -400,8 +391,6 @@ async def main(page: ft.Page):
             ],
         )
         page.open(dialog)
-        page.update()  # type: ignore
-        # イベント関数だが、ここでのpage.update()は行わない。ダイアログのボタンクリック後の関数で行う。
 
     async def handle_remove_pair_button_click(e: ft.ControlEvent):
         async def _process_one_by_one(pair: tuple[ch.Character, ch.Character]):
@@ -436,7 +425,7 @@ async def main(page: ft.Page):
                 await _process_one_by_one(pair)
                 await _process_one_by_one((pair[1], pair[0]))
             page.close(dialog)
-            page.update()  # type: ignore
+            page.update(main_content)  # type: ignore
 
         logger.info("ControlEvent: handle_remove_pair_button_click")
         dialog = co.ft.CupertinoAlertDialog(
@@ -452,21 +441,17 @@ async def main(page: ft.Page):
                 co.ActionNo(),
             ],
         )
-        page.overlay.append(dialog)
-        dialog.open = True
-        page.update()  # type: ignore
+        page.open(dialog)
 
     async def handle_delete_all_history_button_click(e: ft.ControlEvent):
         async def _clear_all_history(e: ft.ControlEvent):
-            await page.client_storage.clear_async()
             page.close(second_dialog)
-            page.update()  # type: ignore
+            await page.client_storage.clear_async()
 
         def _two_step_approval(e: ft.ControlEvent):
             page.close(first_dialog)
             sleep(0.5)
-            page.overlay.append(second_dialog)
-            page.update()  # type: ignore
+            page.open(second_dialog)
 
         logger.info("ControlEvent: handle_delete_all_history_button_click")
         if not isinstance(e, ft.ControlEvent):  # type: ignore
@@ -496,14 +481,12 @@ async def main(page: ft.Page):
                 value="本当に削除しますか？",
                 style=mts,
             ),
-            open=True,
             actions=[
                 ft.CupertinoDialogAction(text="Yes", on_click=_clear_all_history),
                 co.ActionNo(),
             ],
         )
-        page.overlay.append(first_dialog)
-        page.update()  # type: ignore
+        page.open(first_dialog)
 
     async def handle_load_state_from_client_storage_button_click(
         e: ft.ControlEvent,
@@ -524,7 +507,7 @@ async def main(page: ft.Page):
             if c.state.exist != value["exist"]:  # type: ignore
                 c.state.exist = not c.state.exist
                 synchronize_existence_and_controls(c)
-        page.update()  # type: ignore
+        page.update(main_content)  # type: ignore
 
     # メニューバー 操作
 
@@ -561,7 +544,7 @@ async def main(page: ft.Page):
                 synchronize_existence_and_controls(c)
 
         theme.color_scheme_seed = route_color_dict[selected_route]
-        page.update()  # type: ignore
+        page.update(main_content)  # type: ignore
 
     def handle_character_selection_clear_button_click(e: ft.ControlEvent) -> None:
         logger.info("ControlEvent: handle_character_selection_clear_button_click")
@@ -570,14 +553,14 @@ async def main(page: ft.Page):
                 continue
             c.state.exist = False
             synchronize_existence_and_controls(c)
-        page.update()  # type: ignore
+        page.update(main_content)  # type: ignore
 
     def handle_make_all_pairs_divorced_button_click(e: ft.ControlEvent) -> None:
         logger.info("ControlEvent: handle_make_all_pairs_divorced_button_click")
         for c in ct:
             if isinstance(c.tentative_pair, ch.Character):
                 divorce_and_update_controls(c, c.tentative_pair)
-        page.update()  # type: ignore
+        page.update(main_content)  # type: ignore
 
     # メニューバー その他
     def handle_display_ending_text_button_click(e: ft.ControlEvent) -> None:

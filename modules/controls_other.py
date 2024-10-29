@@ -7,9 +7,6 @@ import flet as ft
 from flet_core.types import OptionalControlEventCallable
 
 
-# Obtain consent in the dialog and execute the function.
-
-
 class WindowCloseDialog(ft.CupertinoAlertDialog):
     def __init__(
         self,
@@ -38,11 +35,9 @@ class WindowCloseDialog(ft.CupertinoAlertDialog):
         ]
 
     def __close_window(self, e: ControlEvent):
-        e.page.window.close()
+        e.page.close(self)  # type: ignore
+        e.page.window.close()  # type: ignore
         exit(False)
-
-    #    page.overlay.append(dialog)
-    #     dialog.open = True
 
 
 class ActionNo(ft.CupertinoDialogAction):
@@ -50,8 +45,7 @@ class ActionNo(ft.CupertinoDialogAction):
         super().__init__(text="No", on_click=self._handle_click)
 
     def _handle_click(self, e: ft.ControlEvent):
-        self.parent.open = False
-        self.page.update()
+        self.page.close(self.parent)  # type: ignore
 
 
 # ft.NavigationBarDestination のlabelの文字サイズの変更方法が分からなかったため、自作。
@@ -71,40 +65,3 @@ class NavigationBarIconContent(ft.Column):
                 controls=[ft.Text(value=text, size=text_size)],
             ),
         ]
-
-
-# class ActionDialogObtainConsentAndExecuteFunction(ft.CupertinoAlertDialog):
-#     def __init__(
-#         self,
-#         func: Callable[[], Any],
-#         open: bool = False,
-#         modal: bool = False,
-#         title: ft.Control = ft.Text("確認"),
-#         content: ft.Control | None = None,
-#         on_dismiss: OptionalControlEventCallable[Any] = None,
-#         ref: ft.Ref | None = None,
-#         disabled: bool | None = None,
-#         visible: bool | None = None,
-#         data: Any = None,
-#     ):
-#         super().__init__(
-#             open=open,
-#             modal=modal,
-#             title=title,
-#             content=content,
-#             on_dismiss=on_dismiss,
-#             ref=ref,
-#             disabled=disabled,
-#             visible=visible,
-#             data=data,
-#         )
-#         self.func = func
-#         self.actions = [
-#             ft.CupertinoDialogAction(text="Yes", on_click=self.__handle_click_Yes),
-#             ActionNo(),
-#         ]
-
-#     def __handle_click_Yes(self, e: ControlEvent):
-#         self.open = False
-#         e.control.page.update()
-#         self.func()

@@ -1,4 +1,23 @@
 
+== page
+
+=== update
+
+`page.update()` よりも `page.update(control)` の方が早い。
+
+[source,python]
+----
+def open_dialog_slower():
+    page.overlay.append(
+        ft.CupertinoAlertDialog(open = True,)
+    )
+    page.update()
+
+def open_dialog_faster():
+    dialog = ft.CupertinoAlertDialog()
+    page.open(dialog)
+
+----
 
 == theme
 
