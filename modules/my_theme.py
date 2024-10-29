@@ -3,7 +3,7 @@ from enum import IntEnum
 
 
 class TextSize(IntEnum):
-    small = 12
+    small = 14
     medium = 16
     large = 22
 
