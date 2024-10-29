@@ -798,7 +798,7 @@ async def main(page: ft.Page):
     page.navigation_bar = ft.CupertinoNavigationBar(
         bgcolor=ft.colors.ON_INVERSE_SURFACE,
         on_change=handle_navigation_bar_change,
-        height=60,
+        height=66,
         destinations=[
             ft.NavigationBarDestination(
                 icon_content=co.NavigationBarIconContent(

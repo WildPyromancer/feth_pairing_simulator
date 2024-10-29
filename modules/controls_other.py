@@ -48,13 +48,15 @@ class ActionNo(ft.CupertinoDialogAction):
         self.page.close(self.parent)  # type: ignore
 
 
-# ft.NavigationBarDestination のlabelの文字サイズの変更方法が分からなかったため、自作。
-class NavigationBarIconContent(ft.Column):
+class NavigationBarIconContent(ft.Container):
     def __init__(self, icon_name: str, text: str, text_size: int):
         super().__init__()
-        self.spacing = 0
-        self.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-        self.controls = [
-            ft.Icon(name=icon_name),
-            ft.Text(value=text, size=text_size),
-        ]
+        self.margin = 5
+        self.content = ft.Column(
+            spacing=0,
+            horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            controls=[
+                ft.Icon(name=icon_name),
+                ft.Text(value=text, size=text_size),
+            ],
+        )
