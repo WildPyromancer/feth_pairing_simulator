@@ -74,7 +74,7 @@ async def main(page: ft.Page):
     mts = th.MyTextStyle()
 
     confirmation_title = ft.Text(
-        value="確認", style=th.MyTextStyle(size=th.TextSize.large)
+        value="確認", style=th.MyTextStyle(size=th.TextSize.large.value)
     )
 
     theme = th.MyTheme()
@@ -475,7 +475,7 @@ async def main(page: ft.Page):
         second_dialog = ft.CupertinoAlertDialog(
             title=ft.Text(
                 value="最後の確認",
-                style=ft.TextStyle(size=th.TextSize.large, color="red"),
+                style=ft.TextStyle(size=th.TextSize.large.value, color="red"),
             ),
             content=ft.Text(
                 value="本当に削除しますか？",
@@ -589,7 +589,7 @@ async def main(page: ft.Page):
                     ft.Icon(name=ft.icons.ARROW_BACK_OUTLINED),
                     ft.Text(
                         value="戻る",
-                        style=th.MyTextStyle(size=th.TextSize.large),
+                        style=th.MyTextStyle(size=th.TextSize.large.value),
                         weight=ft.FontWeight.BOLD,
                     ),
                 ]
@@ -664,7 +664,7 @@ async def main(page: ft.Page):
         style=menu_style,
         controls=[
             ft.SubmenuButton(
-                width=th.TextSize.medium * 5,
+                width=th.TextSize.medium.value * 5,
                 content=ft.Text("履歴", style=mts, text_align=ft.TextAlign.CENTER),
                 menu_style=sub_menu_style,
                 controls=[
@@ -687,7 +687,7 @@ async def main(page: ft.Page):
                 ],
             ),
             ft.SubmenuButton(
-                width=th.TextSize.medium * 5,
+                width=th.TextSize.medium.value * 5,
                 content=ft.Text("操作", style=mts, text_align=ft.TextAlign.CENTER),
                 menu_style=sub_menu_style,
                 controls=[
@@ -698,7 +698,7 @@ async def main(page: ft.Page):
                                 style=ft.ButtonStyle(
                                     bgcolor=f"{route_color_dict[r.value]}"
                                 ),
-                                content=ft.Text(r.value, size=th.TextSize.medium),
+                                content=ft.Text(r.value, size=th.TextSize.medium.value),
                                 data=r,
                                 on_click=handle_load_existence_from_route_preset_button_click,
                             )
@@ -716,7 +716,7 @@ async def main(page: ft.Page):
                 ],
             ),
             ft.SubmenuButton(
-                width=th.TextSize.medium * 6,
+                width=th.TextSize.medium.value * 6,
                 content=ft.Text("その他", style=mts, text_align=ft.TextAlign.CENTER),
                 menu_style=sub_menu_style,
                 controls=[
@@ -731,7 +731,7 @@ async def main(page: ft.Page):
                 ],
             ),
             ft.SubmenuButton(
-                width=th.TextSize.medium * 6,
+                width=th.TextSize.medium.value * 6,
                 content=ft.Text("ヘルプ", style=mts, text_align=ft.TextAlign.CENTER),
                 menu_style=sub_menu_style,
                 controls=[
@@ -802,12 +802,14 @@ async def main(page: ft.Page):
         destinations=[
             ft.NavigationBarDestination(
                 icon_content=co.NavigationBarIconContent(
-                    ft.icons.MANAGE_ACCOUNTS, "所属キャラクター選択", th.TextSize.small
+                    ft.icons.MANAGE_ACCOUNTS,
+                    "所属キャラクター選択",
+                    th.TextSize.small.value,
                 )
             ),
             ft.NavigationBarDestination(
                 icon_content=co.NavigationBarIconContent(
-                    ft.icons.FAVORITE, "ペア作成", th.TextSize.small
+                    ft.icons.FAVORITE, "ペア選択", th.TextSize.small.value
                 )
             ),
         ],

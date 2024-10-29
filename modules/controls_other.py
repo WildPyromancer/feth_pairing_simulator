@@ -31,7 +31,7 @@ class WindowCloseDialog(ft.CupertinoAlertDialog):
         )
         self.on_dismiss = self.__close_window
         self.actions = [
-            ft.CupertinoDialogAction(text="終了", on_click=self.__close_window)
+            ft.CupertinoDialogAction(text="終了", on_click=self.__close_window),
         ]
 
     def __close_window(self, e: ControlEvent):
@@ -53,15 +53,8 @@ class NavigationBarIconContent(ft.Column):
     def __init__(self, icon_name: str, text: str, text_size: int):
         super().__init__()
         self.spacing = 0
+        self.horizontal_alignment = ft.CrossAxisAlignment.CENTER
         self.controls = [
-            ft.Row(
-                spacing=0,
-                alignment=ft.MainAxisAlignment.CENTER,
-                controls=[ft.Icon(name=icon_name)],
-            ),
-            ft.Row(
-                spacing=0,
-                alignment=ft.MainAxisAlignment.CENTER,
-                controls=[ft.Text(value=text, size=text_size)],
-            ),
+            ft.Icon(name=icon_name),
+            ft.Text(value=text, size=text_size),
         ]
