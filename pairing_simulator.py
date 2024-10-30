@@ -511,6 +511,15 @@ async def main(page: ft.Page):
 
     # メニューバー 操作
 
+    def _unexpected_control_event_waring(v):  # type: ignore
+        logger.warning(
+            f"{er.ErrorCodeAndUserMessage.UNEXPECTED_CONTROL_EVENT.name}\n{v=}"
+        )
+        open_dialog(
+            er.ErrorCodeAndUserMessage.UNEXPECTED_CONTROL_EVENT.value,
+            title="エラー",
+        )
+
     def handle_load_existence_from_route_preset_button_click(
         e: ft.ControlEvent,
     ) -> None:
@@ -518,18 +527,12 @@ async def main(page: ft.Page):
             "ControlEvent: handle_load_existence_from_route_preset_button_click"
         )
         if not isinstance(e, ft.ControlEvent):  # type: ignore
-            open_window_close_dialog(
-                er.ErrorCodeAndUserMessage.UNEXPECTED_CONTROL_EVENT.value
-            )
-            logger.error(f"{e=}はコントロールイベントではありません。")
+            _unexpected_control_event_waring(e)
             return
         if isinstance(e.control.data, RouteNames):  # type: ignore
             selected_route = e.control.data.value  # type: ignore
         else:
-            logger.error(er.ErrorCodeAndUserMessage.UNEXPECTED_CONTROL_EVENT.name)
-            open_window_close_dialog(
-                er.ErrorCodeAndUserMessage.UNEXPECTED_CONTROL_EVENT.value
-            )
+            _unexpected_control_event_waring(e)
             return
         logger.debug(f"Load route of {selected_route}.")
         for c in ct:
@@ -546,12 +549,20 @@ async def main(page: ft.Page):
         theme.color_scheme_seed = route_color_dict[selected_route]
         page.update(main_content)  # type: ignore
 
-    def handle_character_selection_clear_button_click(e: ft.ControlEvent) -> None:
-        logger.info("ControlEvent: handle_character_selection_clear_button_click")
+    def handle_unify_all_characters_existence_value_button_click(e: ft.ControlEvent):
+        logger.info(
+            "ControlEvent: handle_unify_all_characters_existence_value_button_click"
+        )
+        if not isinstance(e, ft.ControlEvent):  # type: ignore
+            _unexpected_control_event_waring(e)
+            return
+        if type(e.control.data) is not bool:  # type: ignore
+            _unexpected_control_event_waring(e)
+            return
         for c in ct:
-            if not c.state.exist:
+            if c.state.exist == e.control.data:  # type: ignore
                 continue
-            c.state.exist = False
+            c.state.exist = e.control.data  # type: ignore
             synchronize_existence_and_controls(c)
         page.update(main_content)  # type: ignore
 
@@ -706,8 +717,14 @@ async def main(page: ft.Page):
                         ],
                     ),
                     ft.MenuItemButton(
-                        content=ft.Text("選択のクリア", style=mts),
-                        on_click=handle_character_selection_clear_button_click,
+                        content=ft.Text("全てのキャラクターを選択", style=mts),
+                        data=True,
+                        on_click=handle_unify_all_characters_existence_value_button_click,
+                    ),
+                    ft.MenuItemButton(
+                        content=ft.Text("全てのキャラクターを未選択", style=mts),
+                        data=False,
+                        on_click=handle_unify_all_characters_existence_value_button_click,
                     ),
                     ft.MenuItemButton(
                         content=ft.Text("全てのペアを解消", style=mts),
