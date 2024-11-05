@@ -156,7 +156,7 @@ class CharacterTest(unittest.TestCase):
             valid_ct.get_established_pairs(), [(dd.valid_character0, valid_character1)]
         )
         self.assertEqual(
-            valid_ct.endings_to_str(),
+            valid_ct.ends_to_str(),
             f"・ペアエンド\n{dd.valid_character0.DATA.NAME} & {valid_character1.DATA.NAME}\n\n・ソロエンド\n",
         )
 
@@ -187,9 +187,9 @@ class CharacterDictsTest(unittest.TestCase):
         self.assertEqual(cd.is_state_dict(sd.__dict__), True)
         sd.names_of_married_partner = [1, "1"]
         self.assertEqual(cd.is_state_dict(sd.__dict__), False)
-        sd.names_of_married_partner = True
+        sd.names_of_married_partner = True  # type: ignore
         self.assertEqual(cd.is_state_dict(sd.__dict__), False)
-        sd.exist = 0
+        sd.exist = 0  # type: ignore
         self.assertEqual(cd.is_state_dict(sd.__dict__), False)
         del sd.exist
         self.assertEqual(cd.is_state_dict(sd.__dict__), False)

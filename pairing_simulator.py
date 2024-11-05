@@ -378,7 +378,7 @@ async def main(page: ft.Page):
         logger.info("ControlEvent: handle_save_button_click")
         dialog = ft.CupertinoAlertDialog(
             content=ft.Text(
-                value="現在の所属キャラクター選択の内容を保存し、成立しているペアをペア履歴に追加します。\nなお、これらのデータはユーザーのストレージに保存されます。\nよろしいですか？",
+                value="現在の所属キャラクター選択の内容を保存し、成立しているペアをペア履歴に追加します。\nなお、これらのデータはブラウザのローカルストレージに保存されます。\nよろしいですか？",
                 style=mts,
             ),
             title=confirmation_title,
@@ -405,7 +405,7 @@ async def main(page: ft.Page):
             )
             target_column.dropdown.set_value_by_index(dd_opt_index)
             old_hist = await page.client_storage.get_async(pair[0].DATA.NAME)
-            if not cd.is_state_dict(old_hist):
+            if not cd.is_state_dict(old_hist):  # type: ignore
                 await page.client_storage.set_async(
                     pair[0].DATA.NAME, pair[0].state.__dict__
                 )
@@ -413,7 +413,6 @@ async def main(page: ft.Page):
                     f"クライアントストレージの'{pair[0].DATA.NAME}'に、不正な値「{old_hist}」が保存されていたので更新しました。"
                 )
                 return
-            assert type(old_hist) is dict
             old_hist["names_of_married_partner"] = pair[
                 0
             ].state.names_of_married_partner
@@ -574,9 +573,9 @@ async def main(page: ft.Page):
         page.update(main_content)  # type: ignore
 
     # メニューバー その他
-    def handle_display_ending_text_button_click(e: ft.ControlEvent) -> None:
-        logger.info("ControlEvent: handle_display_ending_text_button_click")
-        open_dialog(body=ct.endings_to_str(), selectable=True, title="組み合わせ一覧")
+    def handle_display_end_text_button_click(e: ft.ControlEvent) -> None:
+        logger.info("ControlEvent: handle_display_end_text_button_click")
+        open_dialog(body=ct.ends_to_str(), selectable=True, title="組み合わせ一覧")
 
     def handle_display_achievement_rate(e: ft.ControlEvent) -> None:
         total = int(0.5 * sum([len(c.DATA.PAIRABLE_NAMES) for c in ct]))
@@ -739,7 +738,7 @@ async def main(page: ft.Page):
                 controls=[
                     ft.MenuItemButton(
                         content=ft.Text("組み合わせのまとめ", style=mts),
-                        on_click=handle_display_ending_text_button_click,
+                        on_click=handle_display_end_text_button_click,
                     ),
                     ft.MenuItemButton(
                         content=ft.Text("達成率", style=mts),

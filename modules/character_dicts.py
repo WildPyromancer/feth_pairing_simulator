@@ -1,5 +1,6 @@
 # coding: utf-8
 from typing import TypedDict, Any
+from typing import TypeGuard
 
 
 class IsDefaultAndJoinable(TypedDict):
@@ -35,7 +36,7 @@ class CharacterStateDict(TypedDict):
     value: StateDict
 
 
-def is_route_data(d: dict[Any, Any]):
+def is_route_data(d: dict[Any, Any]) -> TypeGuard[RouteData]:
     route_names = {"紅花", "銀雪", "蒼月", "翠風"}
     keys = {"default", "joinable"}
     if type(d) is not dict:  # type: ignore
@@ -54,7 +55,7 @@ def is_route_data(d: dict[Any, Any]):
     return True
 
 
-def is_state_dict(d: dict[Any, Any]):
+def is_state_dict(d: dict[Any, Any]) -> TypeGuard[StateDict]:
     keys = {"exist", "names_of_married_partner"}
     if type(d) is not dict:  # type: ignore
         return False

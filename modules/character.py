@@ -132,6 +132,13 @@ class UniqueCharactersTuple(tuple[Character, ...]):
         else:
             raise IncorrectCharacterNameException(s)
 
+    def get_characters_to_solo_end(self):
+        return [
+            c
+            for c in self
+            if all([c.DATA.HAVE_SOLO_END, c.state.exist, c.tentative_pair is None])
+        ]
+
     def get_established_pairs(self):
         _: list[tuple[Character, Character]] = []
         for i, c in enumerate(self):
@@ -142,12 +149,8 @@ class UniqueCharactersTuple(tuple[Character, ...]):
                 _.append((c, tp))
         return _
 
-    def endings_to_str(self) -> str:
-        solo_end_names: list[str] = [
-            c.DATA.NAME
-            for c in self
-            if all([c.DATA.HAVE_SOLO_END, c.state.exist, c.tentative_pair is None])
-        ]
+    def ends_to_str(self) -> str:
+        solo_end_names = [c.DATA.NAME for c in self.get_characters_to_solo_end()]
         ep = self.get_established_pairs()
         ep_to_str = "\n".join([f"{x[0].DATA.NAME} & {x[1].DATA.NAME}" for x in ep])
         solo_end_to_str = ", ".join(solo_end_names)
